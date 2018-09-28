@@ -1,0 +1,21 @@
+{
+    "name": "adamyxt/coin",
+    "description": "Provide all kinds of encryption currency exchange related business logic driver.",
+    "type": "library",
+    "keywords": ["extension"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "adamyu",
+            "email": "adamyxt@outlook.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "adamyxt\\coin\\": ""
+        }
+    }
+}
