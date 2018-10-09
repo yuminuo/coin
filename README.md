@@ -21,12 +21,17 @@ or add
 
 to the require section of your `composer.json` file.
 需要的扩展
+------------
+```
 composer require --prefer-dist yiisoft/yii2-queue
 composer require enqueue/amqp-lib
 composer require achse/geth-jsonrpc-php-client
 composer require danhunsaker/bcmath
+```
 
-配置
+Usage
+-----
+```php
 'bootstrap' => [
         'coin', 'queue', // The component registers its own console commands
     ],
@@ -49,11 +54,4 @@ composer require danhunsaker/bcmath
             'exchangeName' => 'coin'
         ],
     ]
-
-Usage
------
-
-Once the extension is installed, simply use it in your code by  :
-
-```php
-<?= \adamyxt\coin\AutoloadExample::widget(); ?>```
+```
