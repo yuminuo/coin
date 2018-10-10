@@ -28,6 +28,7 @@ to the require section of your `composer.json` file.
 composer require enqueue/amqp-lib
 composer require achse/geth-jsonrpc-php-client
 composer require danhunsaker/bcmath
+composer require kornrunner/ethereum-offline-raw-tx
 ```
 
 生成相关数据库表
