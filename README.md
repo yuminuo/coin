@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist adamyxt/coin "*"
+php composer.phar require --prefer-dist adamyxt/coin "dev-master"
 ```
 
 or add
 
 ```
-"adamyxt/coin": "*"
+"adamyxt/coin": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -45,7 +45,7 @@ Usage
         'queue' => [
             'class' => \yii\queue\amqp_interop\Queue::class,
             'host' => '192.168.99.100',  //MQ地址
-            'port' => 56722,          //端口号
+            'port' => 5672,          //端口号
             'user' => 'guest',       //用户名
             'password' => 'guest',   //密码
             'queueName' => 'coin',    //队列名称
