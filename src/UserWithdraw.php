@@ -24,6 +24,10 @@ use yii\db\ActiveRecord;
  */
 class UserWithdraw extends \yii\db\ActiveRecord
 {
+    const TYPE_BTC = 1;
+    const TYPE_ETH = 2;
+    const TYPE_USDT = 3;
+
     /**
      * @inheritdoc
      */

@@ -46,16 +46,18 @@ class Coin extends BaseCoin
     /**
      * @return int
      */
-    public function block(): int
+    public function block(): string
     {
-        return Yii::$app->queue->push(new BlockJob());
+        return Yii::$app->queue->push(new BlockJob([
+            'client' => $this->_client
+        ]));
     }
 
     /**
      * @param UserWithdraw $user_withdraw
      * @return int
      */
-    public function push(UserWithdraw $user_withdraw): int
+    public function push(UserWithdraw $user_withdraw): string
     {
         // TODO: Implement push() method.
     }

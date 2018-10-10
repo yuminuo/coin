@@ -20,10 +20,11 @@ or add
 ```
 
 to the require section of your `composer.json` file.
+
+
 需要的扩展
 ------------
 ```
-composer require --prefer-dist yiisoft/yii2-queue
 composer require enqueue/amqp-lib
 composer require achse/geth-jsonrpc-php-client
 composer require danhunsaker/bcmath
@@ -43,7 +44,6 @@ Usage
         ],
         'queue' => [
             'class' => \yii\queue\amqp_interop\Queue::class,
-            'strictJobType' => false,
             'host' => '192.168.99.100',  //MQ地址
             'port' => 56722,          //端口号
             'user' => 'guest',       //用户名

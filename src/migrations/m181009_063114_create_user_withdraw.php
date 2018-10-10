@@ -34,7 +34,7 @@ class m181009_063114_create_user_withdraw extends Migration
         ], $tableOptions);
 
         $this->createIndex('index_status', '{{%user_withdraw}}', ['status']);
-        $this->createIndex('address', '{{%user_withdraw}}', ['app_type', 'address']);
+        $this->createIndex('address', '{{%user_withdraw}}', 'address');
     }
 
     /**

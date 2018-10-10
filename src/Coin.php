@@ -51,7 +51,7 @@ abstract class Coin extends Component
      * 同步区块信息(充值交易订单)
      * @return int
      */
-    public function deposit(): int
+    public function deposit(): string
     {
         $this->trigger(self::EVENT_BEFORE_DEPOSIT);
         $message_id = $this->block();
@@ -62,13 +62,13 @@ abstract class Coin extends Component
     /**
      * @return int
      */
-    public abstract function block(): int;
+    public abstract function block(): string;
 
     /**
      * @param UserWithdraw $user_withdraw
      * @return int
      */
-    public function withdraw(UserWithdraw $user_withdraw): int
+    public function withdraw(UserWithdraw $user_withdraw): string
     {
         $event = new WithdrawEvent([
             'user_withdraw' => $user_withdraw,
@@ -89,6 +89,6 @@ abstract class Coin extends Component
      * @param UserWithdraw $user_withdraw
      * @return int
      */
-    public abstract function push(UserWithdraw $user_withdraw): int;
+    public abstract function push(UserWithdraw $user_withdraw): string;
 
 }
