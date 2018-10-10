@@ -8,7 +8,6 @@
 namespace adamyxt\coin\eth;
 
 use adamyxt\coin\cli\Command as CliCommand;
-use Yii;
 
 /**
  * Manages application amqp-queue.
@@ -48,7 +47,7 @@ class Command extends CliCommand
     public function actionAddress(int $num, string $url)
     {
         if ($num < 10000) {
-            print_r( '生成的key数量必须大于10000'.PHP_EOL);
+            print_r('生成的key数量必须大于10000' . PHP_EOL);
             return;
         }
         $generator_path = dirname(__FILE__) . '/ethkey -n=' . $num . ' -u="' . $url . '"';

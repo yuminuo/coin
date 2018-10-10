@@ -30,6 +30,11 @@ composer require achse/geth-jsonrpc-php-client
 composer require danhunsaker/bcmath
 ```
 
+生成相关数据库表
+------------
+```
+yii migrate --migrationPath=@adamyxt/coin/src/migrations
+```
 Usage
 -----
 ```php
@@ -58,12 +63,13 @@ Usage
 
 生成ETH私钥方法
 -----
-
+```
 php yii coin/address 10001 "root:123456@tcp(172.17.0.4:3306)/awesome?charset=utf8"
-
+```
 
 开启充值提现功能
 -----
-
+```
 做一个定时任务执行下面命令
 php yii coin/deposit
+```
